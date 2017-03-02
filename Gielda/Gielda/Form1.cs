@@ -69,8 +69,6 @@ namespace Gielda
                 chart.Series["candle"].Color = Color.RoyalBlue;
                 for (int i = 0; i < Data.Count; i++)
                 {
-                    double[] point = new double[4] { Data[i].high, Data[i].low, Data[i].open, Data[i].close };
-
                     chart.Series["candle"].Points.AddXY(DateTime.ParseExact(Data[i].date, "yyyyMMdd", CultureInfo.InvariantCulture), Data[i].high);
 
                     chart.Series["candle"].Points[i].YValues[1] = Data[i].low;
